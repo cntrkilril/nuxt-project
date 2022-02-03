@@ -22,7 +22,7 @@ export default {
   name: "id",
   components: {Comments},
   asyncData({route, params}) {
-    return axios.get(`http://demo-api.vsdev.space/api/articles/${route.params.id}`).then((res) => {
+    return axios.get(`https://demo-api.vsdev.space/api/articles/${route.params.id}`).then((res) => {
       return {
         news: res.data
       }

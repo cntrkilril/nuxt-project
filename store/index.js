@@ -10,7 +10,7 @@ export const mutations = {
 
 export const actions = {
   async GET_NEWS_FROM_API({commit}) {
-    let {data} = await this.$axios.get('http://demo-api.vsdev.space/api/articles');
+    let {data} = await this.$axios.get('https://demo-api.vsdev.space/api/articles');
     commit('SET_NEWS', data)
   }
 }

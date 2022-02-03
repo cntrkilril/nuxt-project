@@ -30,7 +30,7 @@ export default {
   //   }
   // }
   async fetch() {
-    this.comments = await fetch(`http://demo-api.vsdev.space/api/articles/${this.$route.params.id}/comments`).then((res) => res.json())
+    this.comments = await fetch(`https://demo-api.vsdev.space/api/articles/${this.$route.params.id}/comments`).then((res) => res.json())
   },
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
   methods: {
     async addComment() {
       console.log(this.name, this.text)
-      this.$axios.$post(`http://demo-api.vsdev.space/api/articles/${this.$route.params.id}/comments`,
+      this.$axios.$post(`https://demo-api.vsdev.space/api/articles/${this.$route.params.id}/comments`,
         {
             user_name: this.name,
             comment: this.text
